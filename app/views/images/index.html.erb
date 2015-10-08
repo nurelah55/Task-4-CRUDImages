@@ -1,0 +1,14 @@
+<div>
+<% @images.each do |image| %>
+<%= image_tag image.avatar.url(:thumb) %>
+<br />
+<%= image.title %>
+<br />
+<p>
+	<span><%= link_to 'edit', edit_image_path(image.id)%></span>
+	<span>|</span>
+	<span><%= link_to 'delete', image_path(image.id), method: "DELETE", data: {confirm: 'Delete this data ?'} %></span>
+</p>
+<hr/>
+<% end %>
+</div>

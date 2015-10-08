@@ -1,0 +1,14 @@
+<%= form_for @image, :html => { :multipart => true} do |f| %>
+<%= f.label :title%>
+<%= f.text_field :title%>
+<br />
+<%= f.label :image_name%>
+<%= f.file_field :avatar%>
+<br />
+<%= f.submit :submit %>
+<% end %>
+
+<div>
+	<%= link_to "back to index", images_path %>
+</div>
+
